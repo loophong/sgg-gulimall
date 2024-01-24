@@ -10,12 +10,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>coupon</module>
-        <module>member</module>
-        <module>order</module>
-        <module>product</module>
-        <module>ware</module>
-        <module>common</module>
+        <module>mall-coupon</module>
+        <module>mall-member</module>
+        <module>mall-order</module>
+        <module>mall-product</module>
+        <module>mall-ware</module>
+        <module>mall-common</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
     </modules>
@@ -85,8 +85,8 @@
 
             <dependency>
                 <groupId>com.gulimall</groupId>
-                <artifactId>common</artifactId>
-                <version>${mall.version}</version>
+                <artifactId>mall-common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
