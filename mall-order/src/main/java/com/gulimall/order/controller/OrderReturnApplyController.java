@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gulimall.order.entity.OrderReturnApplyEntity;
 import com.gulimall.order.service.OrderReturnApplyService;
-import com.common.utils.PageUtils;
-import com.common.utils.R;
+import com.gulimall.common.utils.PageUtils;
+import com.gulimall.common.utils.R;
 
 
 

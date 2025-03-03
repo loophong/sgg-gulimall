@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gulimall.coupon.entity.SkuFullReductionEntity;
 import com.gulimall.coupon.service.SkuFullReductionService;
-import com.common.utils.PageUtils;
-import com.common.utils.R;
+import com.gulimall.common.utils.PageUtils;
+import com.gulimall.common.utils.R;
 
 
 
