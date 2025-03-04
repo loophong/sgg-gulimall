@@ -30,6 +30,12 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    /**
+     * @description: 获取用户的所有优惠券
+     * @author: hong
+     * @date: 2025/3/4 20:25
+     * @version: 1.0
+     */
     @RequestMapping("/member/list")
     public R memberCoupons(){
         CouponEntity couponEntity = new CouponEntity();
