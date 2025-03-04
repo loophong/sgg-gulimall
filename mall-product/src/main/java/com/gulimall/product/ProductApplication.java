@@ -19,7 +19,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *          设置主键自增
  */
 
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @MapperScan("com.gulimall.product.dao")
 @SpringBootApplication
 public class ProductApplication {
