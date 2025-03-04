@@ -32,8 +32,8 @@
         <mysql.version>8.0.23</mysql.version>
         <http.components.version>4.4.13</http.components.version>
         <commons.lang.version>2.6</commons.lang.version>
-        <spring.boot.version>2.4.3</spring.boot.version>
-        <spring-cloud.version>2020.0.1</spring-cloud.version>
+        <spring.boot.version>2.6.13</spring.boot.version>
+        <spring.cloud.version>2021.0.1</spring.cloud.version>
     </properties>
     <!--  子模块继承父模块之后，提供作用：锁定版本 + 子模块不用再写 version  -->
     <dependencyManagement>
@@ -48,7 +48,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -91,14 +91,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--  这里的依赖会被子模块继承  -->
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+
 </project>
 
 
