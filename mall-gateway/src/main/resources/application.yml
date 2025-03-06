@@ -1,5 +1,5 @@
 server:
-  port: 12000
+  port: 88
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,6 +10,34 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.26.3:8848
+    gateway:
+      routes:
+        - id: test_baidu
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+        - id: test_qq
+          uri: https://www.qq.com
+          predicates:
+            - Query=url,qq
+
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+# 解释如下：
+# uri 后面的lb = load balance 负载均衡
+# predicates   断言，过滤请求
+# -path 是以api为前缀的均路由到renren-fast
+#
+# 对于前端发送的 http://localhost:88/api/captcha.jpg  默认处理步骤
+  # 通过前缀 api 找到 renren-fast服务，将其地址替换为真实的地址 -->  http://localhost:8080/api/captcha.jpg
+# 需要把上面的路径 转换为真正访问的路径 http://localhost:8080/renren-fast/captcha.jpg
+  # 通过 filters 解决
+
+
   application:
     name: gulimall-gateway
 mybatis-plus:
