@@ -1,0 +1,19 @@
+server:
+  port: 12000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.26.3:3306/gulimall_ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: loophong
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.26.3:8848
+  application:
+    name: gulimall-gateway
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
