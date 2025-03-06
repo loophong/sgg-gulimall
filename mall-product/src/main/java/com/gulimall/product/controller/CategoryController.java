@@ -32,6 +32,13 @@ public class CategoryController {
     private CategoryService categoryService;
 
     /**
+     * @description: 查询出所有分类以及子分类，以树形结构组装起来
+     * @author: hong
+     * @date: 2025/3/6 16:25
+     * @version: 1.0
+     */
+
+    /**
      * 列表
      */
     @RequestMapping("/list")
